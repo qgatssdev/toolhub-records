@@ -1,0 +1,38 @@
+@import "rsuite/dist/rsuite.css";
+
+.leaderboard__root {
+  width: 100%;
+  .leaderboard__root__heading {
+    margin-left: 5%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    @media (min-width: 0px) and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .heading__div1 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .heading__div1__leaderboard {
+        color: #101828;
+        font-weight: 500;
+        font-size: 30px;
+      }
+      .heading__div1__details {
+        color: #667085;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+    .heading__div2 {
+      z-index: -1;
+      @media (min-width: 0px) and (max-width: 768px) {
+        margin-top: 5%;
+      }
+    }
+  }
+}
