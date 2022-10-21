@@ -1,12 +1,13 @@
 import Header from "../../components/Header/Header";
 import "./Leaderboard.scss";
 import { DateRangePicker } from "rsuite";
-import React from "react";
 
 const Leaderboard = () => {
   return (
     <div className="leaderboard__root">
-      <Header />
+      <header>
+        <Header />
+      </header>
       <section className="leaderboard__root__heading">
         <div className="heading__div1">
           <p className="heading__div1__leaderboard">Leaderboard</p>
