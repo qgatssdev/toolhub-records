@@ -1,0 +1,36 @@
+.analyticsFigure__root {
+  background: #ffffff;
+  max-width: 310px;
+  min-width: 250px;
+  width: 100%;
+  min-height: 148px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #eaecf0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  .analyticsFigure__root__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .analyticsFigure__root__figure {
+    p {
+      font-weight: 600;
+      font-size: 32px;
+      color: #101828;
+    }
+  }
+
+  .analyticsFigure__root__percentage {
+    display: flex;
+    align-items: center;
+    p {
+      color: #344054;
+    }
+  }
+}
