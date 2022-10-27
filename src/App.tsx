@@ -4,10 +4,16 @@ import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import "./App.scss";
 import Home from "./pages/Home/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  }, []);
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
