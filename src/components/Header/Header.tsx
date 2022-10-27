@@ -2,23 +2,30 @@ import "./Header.scss";
 import { NavLink } from "react-router-dom";
 import { Spiral as Hamburger } from "hamburger-react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [toggled, setToggled] = useState(false);
+  let location = useLocation();
+
   return (
     <div className="header__root">
       <div className="header__root__content">
         <div className="header__root__content__div1">
           <img
-            src={require("../../assets/Wikimedia-Phabricator-logo.png)")}
+            src={require("../../assets/logo-community.svg").default}
             alt="logo"
           />
           <ul>
-            <li>
-              <NavLink to={"/"} className="div1__navlink">
-                Home
-              </NavLink>
-            </li>
+            {location.pathname === "/" ? (
+              ""
+            ) : (
+              <li>
+                <NavLink to={"/"} className="div1__navlink">
+                  Home
+                </NavLink>
+              </li>
+            )}
             <li>
               <NavLink to={"/Dashboard"} className="div1__navlink">
                 Dashboard
@@ -32,27 +39,30 @@ const Header = () => {
           </ul>
         </div>
         <div className="header__root__content__div2">
-          <div className="div2__icons">
-            <img
-              src={require("../../assets/search.svg").default}
-              alt="search"
-            />
-            <img
-              src={require("../../assets/settings.svg").default}
-              alt="settings"
-            />
-            <img
-              src={require("../../assets/notifications.svg").default}
-              alt="notifications"
-            />
-          </div>
+          {location.pathname === "/" ? (
+            ""
+          ) : (
+            <div className="div2__icons">
+              <img
+                src={require("../../assets/search.svg").default}
+                alt="search"
+              />
+              <img
+                src={require("../../assets/settings.svg").default}
+                alt="settings"
+              />
+              <img
+                src={require("../../assets/notifications.svg").default}
+                alt="notifications"
+              />
+            </div>
+          )}
           <div className="div2__user">
             <img src={require("../../assets/guest.png")} alt="" />
             <p>Guest</p>
           </div>
           <div className="div2__hamburger">
             <Hamburger
-              //   color="#fff"
               color={toggled ? "#101828" : "#fff"}
               duration={0.8}
               onToggle={() => {
