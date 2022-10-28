@@ -21,18 +21,34 @@ const Header = () => {
               ""
             ) : (
               <li>
-                <NavLink to={"/"} className="div1__navlink">
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) =>
+                    isActive ? "activeStyle" : "div1__navlink"
+                  }
+                  end
+                >
                   Home
                 </NavLink>
               </li>
             )}
             <li>
-              <NavLink to={"/Dashboard"} className="div1__navlink">
+              <NavLink
+                to={"/Dashboard"}
+                className={({ isActive }) =>
+                  isActive ? "activeStyle" : "div1__navlink"
+                }
+              >
                 Dashboard
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Leaderboard"} className="div1__navlink">
+              <NavLink
+                to={"/Leaderboard"}
+                className={({ isActive }) =>
+                  isActive ? "activeStyle" : "div1__navlink"
+                }
+              >
                 Leaderboard
               </NavLink>
             </li>
@@ -76,17 +92,33 @@ const Header = () => {
         <section className="hamburger__root">
           <ul>
             <li>
-              <NavLink to={"/"} className="hamburger__root__links">
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? "mobileActiveStyle" : "hamburger__root__links"
+                }
+                end
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Dashboard"} className="hamburger__root__links">
+              <NavLink
+                to={"/Dashboard"}
+                className={({ isActive }) =>
+                  isActive ? "mobileActiveStyle" : "hamburger__root__links"
+                }
+              >
                 Dashboard
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Leaderboard"} className="hamburger__root__links">
+              <NavLink
+                to={"/Leaderboard"}
+                className={({ isActive }) =>
+                  isActive ? "mobileActiveStyle" : "hamburger__root__links"
+                }
+              >
                 Leaderboard
               </NavLink>
             </li>

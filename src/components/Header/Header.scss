@@ -1,9 +1,14 @@
 .header__root {
-  height: 80px;
+  height: 85px;
   width: 100%;
   background: #101828;
   position: fixed;
   top: 0;
+  z-index: 1;
+  @media (min-width: 0) and (max-width: 576px) {
+    height: 75px;
+  }
+
   .header__root__content {
     display: flex;
     justify-content: space-between;
@@ -26,10 +31,21 @@
         gap: 15%;
         list-style: none;
         li {
+          font-size: 16px;
           .div1__navlink {
             text-decoration: none;
             color: #dbe2f0;
             cursor: pointer;
+            &:hover {
+              color: #c0c5cf;
+            }
+          }
+          .activeStyle {
+            text-decoration: underline;
+            color: #dbe2f0;
+            &:hover {
+              color: #c0c5cf;
+            }
           }
         }
         @media (min-width: 0px) and (max-width: 768px) {
@@ -96,6 +112,12 @@
       li {
         .hamburger__root__links {
           text-decoration: none;
+          cursor: pointer;
+          color: #101828;
+          font-size: 30px;
+        }
+        .mobileActiveStyle {
+          text-decoration: underline;
           cursor: pointer;
           color: #101828;
           font-size: 30px;
