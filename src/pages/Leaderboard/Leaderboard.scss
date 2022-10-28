@@ -1,10 +1,12 @@
 @import "rsuite/dist/rsuite.css";
+@import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 
 .leaderboard__root {
   width: 100%;
   padding-top: 9%;
   @media (min-width: 0) and (max-width: 576px) {
     padding-top: 25%;
+    padding-bottom: 10%;
   }
 
   .leaderboard__root__heading {
@@ -37,6 +39,33 @@
       z-index: -1;
       @media (min-width: 0px) and (max-width: 768px) {
         margin-top: 5%;
+      }
+    }
+  }
+
+  .Section__Leader {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 60px;
+    .Leader__table {
+      width: 100%;
+      .Td,
+      .Th {
+        border-bottom: 1px solid #edf2f7;
+        padding: 8px;
+      }
+      .Tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .Tr:hover {
+        background-color: #ddd;
+      }
+      .Th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #fafafb;
+        color: #101828;
       }
     }
   }
