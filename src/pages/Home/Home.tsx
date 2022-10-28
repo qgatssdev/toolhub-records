@@ -10,61 +10,41 @@ import * as animation from "../../lottie/72390-happy-mail.json";
 import Footer from "../../components/Footer/Footer";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const bodyRef = useRef<HTMLDivElement>(null);
+  AOS.init();
 
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#body__text",
+      ".home__body h1",
       {
         opacity: 0,
         yPercent: 100,
         stagger: 0.1,
         ease: "power3.inOut",
       },
-      { opacity: 1, duration: 0.7, delay: 0.2, yPercent: 0 }
+      { opacity: 1, duration: 0.7, delay: 0.4, yPercent: 0, zIndex: 0 }
     );
     tl.fromTo(
       "#body__text2",
       {
         opacity: 0,
       },
-      { opacity: 1, duration: 0.5, delay: 0.2 }
+      { opacity: 1, duration: 0.5, delay: 0.2 },
+      "+0.5"
     );
     tl.fromTo(
       ".home__image",
       {
         opacity: 0,
       },
-      { opacity: 1, duration: 0.5, delay: 0.1 },
+      { opacity: 1, duration: 0.5, delay: 0.3 },
       "+0.4"
     );
-  }, []);
-
-  useEffect(() => {
-    const element = bodyRef.current;
-    if (element !== null) {
-      gsap.fromTo(
-        element.querySelector(".home__cards__header"),
-        {
-          opacity: 0,
-          y: -20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            trigger: element.querySelector(".home__cards__roots"),
-            start: "top top",
-            end: "bottom center",
-            scrub: true,
-            markers: true,
-          },
-        }
-      );
-    }
   }, []);
 
   const defaultOptions = {
@@ -82,7 +62,7 @@ const Home = () => {
         <Header />
       </header>
       <section className="home__body">
-        <h1 id="body__text">Smart Solution for Toolhub</h1>
+        <h1>Smart Solution for Toolhub</h1>
         <div className="home__body__p">
           <p id="body__text2">
             Organize your work, manage your tools, tasks and goals. with
@@ -96,9 +76,14 @@ const Home = () => {
       <section className="home__cards" ref={bodyRef}>
         <p className="home__cards__header">Some Of Our Most Popular Tools</p>
         <div className="home__cards__roots">
-          {tools.map((tools, index) => {
+          {tools.map((tools) => {
             return (
-              <div className="home__cards__card">
+              <div
+                className="home__cards__card"
+                key={tools.id}
+                data-aos="zoom-out-down"
+                data-aos-duration="1000"
+              >
                 <div className="card__image">
                   {tools.logo === "scroll" ? (
                     <GroupWorkIcon style={{ fontSize: "10em" }} />
