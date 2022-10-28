@@ -2,22 +2,22 @@ import AnalyticFigure from "../../components/AnalyticFigure/AnalyticFigure";
 import Header from "../../components/Header/Header";
 import "./Dashboard.scss";
 import { DateRangePicker } from "rsuite";
-import { Doughnut } from "react-chartjs-2";
+// import { Doughnut } from "react-chartjs-2";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 const Dashboard = () => {
-  const data = {
-    datasets: [
-      {
-        label: "# of Votes",
-        data: [1200, 20, 500, 500],
-        backgroundColor: ["#9C75F0", "#6695FF", "#66CB9F", "#FFE566"],
-        borderColor: ["#9C75F0", "#6695FF", "#66CB9F", "#FFE566"],
-        borderWidth: 1,
-      },
-    ],
-    // responsive: true,
-  };
+  // const data = {
+  //   datasets: [
+  //     {
+  //       label: "# of Votes",
+  //       data: [1200, 20, 500, 500],
+  //       backgroundColor: ["#9C75F0", "#6695FF", "#66CB9F", "#FFE566"],
+  //       borderColor: ["#9C75F0", "#6695FF", "#66CB9F", "#FFE566"],
+  //       borderWidth: 1,
+  //     },
+  //   ],
+  //   // responsive: true,
+  // };
 
   return (
     <div className="dashboard__root">
@@ -78,7 +78,7 @@ const Dashboard = () => {
               <p>Tools</p>
             </div>
             <div className="doughnut__data">
-              <Doughnut data={data} />
+              {/* <Doughnut data={data} /> */}
             </div>
             <div className="doughnut__bar">
               <div className="doughbut__bar__flex">
