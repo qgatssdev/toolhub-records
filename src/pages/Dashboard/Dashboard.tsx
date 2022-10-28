@@ -33,7 +33,7 @@ const Dashboard = () => {
         </div>
         <div className="dashboard__dates_picker">
           <DateRangePicker
-            value={[new Date("2022-10-8"), new Date()]}
+            value={[new Date("2022-10-8".replace(/-/g, "/")), new Date()]}
             size="lg"
             readOnly
             format="dd-MM-yyyy"

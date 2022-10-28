@@ -19,7 +19,7 @@ const Leaderboard = () => {
         </div>
         <div className="heading__div2">
           <DateRangePicker
-            value={[new Date("2022-10-8"), new Date()]}
+            value={[new Date("2022-10-8".replace(/-/g, "/")), new Date()]}
             size="lg"
             readOnly
             format="dd-MM-yyyy"
