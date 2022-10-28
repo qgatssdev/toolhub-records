@@ -5,7 +5,7 @@ import PublicIcon from "@mui/icons-material/Public";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import GroupWorkIcon from "@mui/icons-material/GroupWork";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import * as animation from "../../lottie/72390-happy-mail.json";
 import Footer from "../../components/Footer/Footer";
 import { gsap } from "gsap";
@@ -46,15 +46,6 @@ const Home = () => {
       "+0.4"
     );
   }, []);
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   return (
     <div className="home__root">
@@ -107,7 +98,12 @@ const Home = () => {
       </section>
       <section className="home__tools">
         <div className="home__tools__animation">
-          <Lottie options={defaultOptions} height={400} width={400} />
+          <Lottie
+            animationData={animation}
+            height={400}
+            width={400}
+            loop={true}
+          />
         </div>
         <div className="home__tools__greeting">
           <p className="greeting__1">
