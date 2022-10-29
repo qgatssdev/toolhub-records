@@ -2,23 +2,11 @@ import AnalyticFigure from "../../components/AnalyticFigure/AnalyticFigure";
 import Header from "../../components/Header/Header";
 import "./Dashboard.scss";
 import { DateRangePicker } from "rsuite";
-// import { Doughnut } from "react-chartjs-2";
-import ProgressBar from "@ramonak/react-progress-bar";
+import DoughnutChart from "../../components/DoughtnutChart/DoughnutChart";
+import PieChartTotal from "../../components/PieChart/PieChartTotal";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 const Dashboard = () => {
-  // const data = {
-  //   datasets: [
-  //     {
-  //       label: "# of Votes",
-  //       data: [1200, 20, 500, 500],
-  //       backgroundColor: ["#9C75F0", "#6695FF", "#66CB9F", "#FFE566"],
-  //       borderColor: ["#9C75F0", "#6695FF", "#66CB9F", "#FFE566"],
-  //       borderWidth: 1,
-  //     },
-  //   ],
-  //   // responsive: true,
-  // };
-
   return (
     <div className="dashboard__root">
       <header>
@@ -44,7 +32,7 @@ const Dashboard = () => {
         <div className="dashboard__analytics__div1">
           <AnalyticFigure
             label={"Total Tools"}
-            figure={1200}
+            figure={100}
             percentage={40}
             percentageBoolean={true}
           />
@@ -57,72 +45,46 @@ const Dashboard = () => {
         </div>
         <div className="dashboard__analytics__div2">
           <AnalyticFigure
-            label={"Total Tools"}
-            figure={500}
+            label={"Total Tools Edited"}
+            figure={40}
             percentage={50}
             percentageBoolean={true}
           />
           <AnalyticFigure
             label={"Total Tools"}
-            figure={500}
+            figure={50}
             percentage={30}
             percentageBoolean={true}
           />
         </div>
       </section>
-      <section className="dashboard__chart">
-        <div className="dashboard__chart__sd"></div>
-        <div className="dashboard__chart__doughnut">
-          <div className="doughnut__wrapper">
-            <div className="doughnut__header">
-              <p>Tools</p>
+      <section className="dashboard__chartss">
+        <div className="charts__pie">
+          <PieChartTotal />
+          <div className="pie__leaderboard">
+            <p className="pie__leaderboard__h1">Leaderboard </p>
+            <p className="pie__leaderboard__p">
+              {" "}
+              <span>
+                <EmojiEventsIcon style={{ color: "#FFD700" }} />
+              </span>
+            </p>
+            <div>
+              <p>Rank: 1</p>
             </div>
-            <div className="doughnut__data">
-              {/* <Doughnut data={data} /> */}
+            <div>
+              <p>Name: QuickStatements</p>
             </div>
-            <div className="doughnut__bar">
-              <div className="doughbut__bar__flex">
-                <div className="pp">
-                  <ProgressBar
-                    completed={40}
-                    bgColor={"#9C75F0"}
-                    animateOnRender={true}
-                  />
-                </div>
-                <p>Total tools</p>
-              </div>
-              <div className="doughbut__bar__flex">
-                <div className="pp">
-                  <ProgressBar
-                    completed={1}
-                    bgColor={"#6695FF"}
-                    animateOnRender={true}
-                  />
-                </div>
-                <p>Tools Without Info</p>
-              </div>
-              <div className="doughbut__bar__flex">
-                <div className="pp">
-                  <ProgressBar
-                    completed={50}
-                    bgColor={"#66CB9F"}
-                    animateOnRender={true}
-                  />
-                </div>
-                <p>Total tools</p>
-              </div>
-              <div className="doughbut__bar__flex">
-                <div className="pp">
-                  <ProgressBar
-                    completed={30}
-                    bgColor={"#FFE566"}
-                    animateOnRender={true}
-                  />
-                </div>
-                <p>Total tools</p>
-              </div>
+            <div>
+              <p>Tool Id: 488</p>
+            </div>
+            <div>
+              <p>Points: 1000</p>
             </div>
           </div>
+        </div>
+        <div className="charts__dough">
+          <DoughnutChart />
         </div>
       </section>
     </div>
