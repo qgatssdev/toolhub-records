@@ -4,8 +4,7 @@ import "./Dashboard.scss";
 import { DateRangePicker } from "rsuite";
 import DoughnutChart from "../../components/DoughtnutChart/DoughnutChart";
 import PieChartTotal from "../../components/PieChart/PieChartTotal";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-///
+import DashboardLeader from "../../components/DashboardLeader/DashboardLeader";
 
 const Dashboard = () => {
   return (
@@ -61,31 +60,15 @@ const Dashboard = () => {
       </section>
       <section className="dashboard__chartss">
         <div className="charts__pie">
-          <PieChartTotal />
-          <div className="pie__leaderboard">
-            <p className="pie__leaderboard__h1">Leaderboard </p>
-            <p className="pie__leaderboard__p">
-              {" "}
-              <span>
-                <EmojiEventsIcon style={{ color: "#FFD700" }} />
-              </span>
-            </p>
-            <div>
-              <p>Rank: 1</p>
-            </div>
-            <div>
-              <p>Name: QuickStatements</p>
-            </div>
-            <div>
-              <p>Tool Id: 488</p>
-            </div>
-            <div>
-              <p>Points: 1000</p>
-            </div>
-          </div>
-        </div>
-        <div className="charts__dough">
           <DoughnutChart />
+        </div>
+
+        <div className="charts__leader">
+          <DashboardLeader />
+        </div>
+
+        <div className="charts__dough">
+          <PieChartTotal />
         </div>
       </section>
     </div>
