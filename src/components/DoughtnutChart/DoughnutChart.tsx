@@ -28,7 +28,6 @@ const DoughnutChart = () => {
   return (
     <div>
       <section className="dashboard__chart">
-        <div className="dashboard__chart__sd"></div>
         <div className="dashboard__chart__doughnut">
           <div className="doughnut__wrapper">
             <div className="doughnut__header">

@@ -1,9 +1,7 @@
 .dashboard__chart {
   display: flex;
   width: 100%;
-  .dashboard__chart__sd {
-    flex-basis: 50%;
-  }
+  min-width: 550px;
 
   .dashboard__chart__doughnut {
     flex-basis: 50%;
