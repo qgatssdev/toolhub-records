@@ -1,0 +1,32 @@
+.dashl__root {
+  .dashl__box {
+    border-radius: 20px;
+    height: fit-content;
+    padding: 30px;
+    background: #ffffff;
+    max-width: 390px;
+    min-height: 270px;
+
+    .box__header {
+      display: flex;
+    }
+
+    .box__table {
+      border-collapse: collapse;
+      width: 100%;
+
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 15px;
+      }
+      th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+      }
+    }
+  }
+}
