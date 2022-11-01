@@ -60,15 +60,15 @@ const Dashboard = () => {
       </section>
       <section className="dashboard__chartss">
         <div className="charts__pie">
-          <DoughnutChart />
+          <PieChartTotal />
         </div>
-
         <div className="charts__leader">
           <DashboardLeader />
         </div>
-
         <div className="charts__dough">
-          <PieChartTotal />
+          <div className="test">
+            <DoughnutChart />
+          </div>
         </div>
       </section>
     </div>
