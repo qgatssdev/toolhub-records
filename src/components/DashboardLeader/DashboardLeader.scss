@@ -6,6 +6,12 @@
     background: #ffffff;
     max-width: 390px;
     min-height: 270px;
+    @media (min-width: 0) and (max-width: 768px) {
+      max-width: 100%;
+    }
+    @media (min-width: 768px) and (max-width: 992px) {
+      min-width: 690px;
+    }
 
     .box__header {
       display: flex;

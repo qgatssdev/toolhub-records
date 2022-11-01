@@ -12,7 +12,7 @@ const DashboardLeader = () => {
           let rank = index + 1;
           if (index === 0) {
             return (
-              <div className="dashl__box">
+              <div className="dashl__box" key={data.toolID}>
                 <p className="box__header">
                   Leaderboard{" "}
                   <span>
@@ -22,18 +22,20 @@ const DashboardLeader = () => {
                   </span>
                 </p>
                 <table className="box__table">
-                  <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>ID</th>
-                    <th>Points</th>
-                  </tr>
-                  <tr>
-                    <td>{rank}</td>
-                    <td>{data.toolName}</td>
-                    <td>{data.toolID}</td>
-                    <td>{data.points}</td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Name</th>
+                      <th>ID</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>{rank}</td>
+                      <td>{data.toolName}</td>
+                      <td>{data.toolID}</td>
+                      <td>{data.points}</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             );
