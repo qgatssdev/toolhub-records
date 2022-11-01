@@ -70,14 +70,10 @@ body {
   }
   .dashboard__chartss {
     margin-top: 20px;
-    overflow: hidden;
+    overflow-x: hidden;
     gap: 30px;
     margin-left: 10%;
     display: flex;
-    position: relative;
-    @media (min-width: 0px) and (max-width: 992px) {
-      overflow: unset;
-    }
 
     @media (min-width: 992px) and (max-width: 1200px) {
       flex-wrap: wrap;
@@ -86,6 +82,9 @@ body {
       flex-direction: column;
       justify-content: center;
       margin-left: 0;
+    }
+    @media (min-width: 1400px) {
+      margin-left: 20%;
     }
 
     .charts__pie {
@@ -101,7 +100,6 @@ body {
       }
     }
     .charts__dough {
-      overflow: hidden;
       .test {
         @media (min-width: 0px) and (max-width: 992px) {
           position: absolute;
