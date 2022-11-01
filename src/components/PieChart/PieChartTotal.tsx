@@ -8,12 +8,12 @@ const PieChartTotal = () => {
 
   const data = [
     {
-      title: "one",
+      title: "Total tools",
       value: 100,
       color: "#9C75F0",
     },
     {
-      title: "two",
+      title: "Tools with missing information",
       value: 20,
       color: "#6695FF",
     },
@@ -43,7 +43,7 @@ const PieChartTotal = () => {
           labelPosition={100 - lineWidth / 2}
         />
       </div>
-      <p>sdnkskdsdn</p>
+      <p>Total tools vs Tools with missing information</p>
     </div>
   );
 };
