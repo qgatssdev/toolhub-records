@@ -2,10 +2,15 @@
   // width: 100%;
   min-width: 390px;
   height: fit-content;
-  background-color: #8b0000;
-  box-shadow: 2px 3px 3px #c1bcbc;
+  background-color: #ffffff;
   padding-bottom: 4%;
   border-radius: 10px;
+  @media (min-width: 0) and (max-width: 768px) {
+    max-width: 300px;
+  }
+  @media (min-width: 768px) and (max-width: 992px) {
+    max-width: 100%;
+  }
 
   .pieChart__data {
     width: 90%;
