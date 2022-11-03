@@ -53,7 +53,7 @@ const Home = () => {
         <Header />
       </header>
       <section className="home__body">
-        <h1>Smart Solution for Toolhub</h1>
+        <h1 data-testid="home__header">Smart Solution for Toolhub</h1>
         <div className="home__body__p">
           <p id="body__text2">
             Organize your work, manage your tools, tasks and goals. with

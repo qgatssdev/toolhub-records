@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { useEffect } from "react";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Leaderboard" element={<Leaderboard />} />
           <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </div>
