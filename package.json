@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.9",
@@ -16,9 +19,11 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "aos": "^2.3.4",
+    "babel-jest": "^29.2.2",
     "chart.js": "^3.9.1",
     "gsap": "^3.11.3",
     "hamburger-react": "^2.5.0",
+    "jest": "^27.5.1",
     "lottie-react": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,6 +31,7 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "react-super-responsive-table": "^5.2.1",
+    "react-test-renderer": "^18.2.0",
     "rsuite": "^5.21.0",
     "sass": "^1.55.0",
     "typescript": "^4.8.4",
@@ -58,7 +64,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@types/aos": "^3.0.4",
-    "@types/react-lottie": "^1.2.6"
+    "@types/react-lottie": "^1.2.6",
+    "jest-canvas-mock": "^2.4.0"
   }
 }
