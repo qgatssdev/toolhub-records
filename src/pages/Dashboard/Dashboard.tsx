@@ -51,7 +51,7 @@ const Dashboard = () => {
             percentageBoolean={true}
           />
           <AnalyticFigure
-            label={"Total Tools"}
+            label={"Total Tools replaced"}
             figure={50}
             percentage={30}
             percentageBoolean={true}
