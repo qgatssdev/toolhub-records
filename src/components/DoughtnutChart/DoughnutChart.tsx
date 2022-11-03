@@ -89,7 +89,7 @@ const DoughnutChart = () => {
                     animateOnRender={true}
                   />
                 </div>
-                <p>Total tools</p>
+                <p>Total tools replaced</p>
               </div>
             </div>
           </div>
