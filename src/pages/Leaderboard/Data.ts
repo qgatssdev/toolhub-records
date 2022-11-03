@@ -32,7 +32,7 @@ export const data = [
   {
     id: 5,
     toolName: "Ranker",
-    toolID: "299",
+    toolID: "229",
     points: 402,
   },
   {
