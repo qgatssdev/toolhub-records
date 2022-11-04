@@ -9,7 +9,7 @@ body {
   @media (min-width: 0) and (max-width: 576px) {
     padding-top: 25%;
   }
-  @media (min-width: 576px) and (max-width: 709px) {
+  @media (min-width: 576px) and (max-width: 790px) {
     padding-top: 15%;
   }
   .dashboard__dates {
@@ -104,6 +104,7 @@ body {
     }
     .charts__dough {
       .test {
+        padding-bottom: 40px;
         @media (min-width: 0px) and (max-width: 992px) {
           position: absolute;
           left: 50%;
