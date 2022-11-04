@@ -30,4 +30,4 @@ Animate On Scroll Library\
 lottie-react\
 react-super-responsive-table\
 Netlify\
-Jest and React testing library\
+Jest and React testing library
