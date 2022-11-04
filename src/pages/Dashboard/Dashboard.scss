@@ -9,6 +9,9 @@ body {
   @media (min-width: 0) and (max-width: 576px) {
     padding-top: 25%;
   }
+  @media (min-width: 576px) and (max-width: 709px) {
+    padding-top: 15%;
+  }
   .dashboard__dates {
     display: flex;
     align-items: center;
