@@ -1,12 +1,13 @@
-# Toolhub editor App
+# Toolhub Records App
 
-This project can be assessed [here](https://toolhub-editor.netlify.app/)
+This project can be assessed [https://toolhub-records.netlify.app](https://toolhub-records.netlify.app/)
 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ## `npm install`
+
 This installs all dependencies
 
 ### `npm start`
