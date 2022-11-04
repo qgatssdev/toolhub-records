@@ -68,5 +68,15 @@
     "@types/aos": "^3.0.4",
     "@types/react-lottie": "^1.2.6",
     "jest-canvas-mock": "^2.4.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js",
+      "jest-canvas-mock"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ]
   }
 }
