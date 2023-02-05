@@ -1,7 +1,5 @@
 # Toolhub Records App
 
-This project can be assessed [https://toolhub-records.netlify.app](https://toolhub-records.netlify.app/)
-
 ## Available Scripts
 
 In the project directory, you can run:
